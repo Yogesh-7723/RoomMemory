@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+
+
+{% block contaner %}
+
+<div class="container">
+<h1>Management :</h1>
+<span>Please enter your product and price carefully</span>
+<hr>
+<form action='/add_product/' method='post'>
+  {% csrf_token %}
+<label for="user"><b>Member Name</b></label><br><br>
+{% if user.is_authenticated %}
+<input type="text"  name="user" id="user" value="{{user.username}}" readonly>
+{% endif %}
+
+<label for="item"><b>Product Name</b></label>
+<input type="text" placeholder="Enter Product Name" name="item" id="item" required>
+
+<label for="price"><b>Product Price</b></label>
+<input type="text" placeholder="Enter Product Price" name="price" id="price" required>
+
+
+<hr>
+<input type='checkbox' name='terms' required><span>By entering an product you agree to our <a href="#">Terms & Privacy</a>.</span>
+
+<button type="submit" class="registerbtn ">Add Product</button>
+</div>
+
+</form>
+</div>
+{% endblock %}

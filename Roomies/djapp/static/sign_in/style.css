@@ -1,0 +1,33 @@
+
+.signin {
+    width: 60%;
+    height: 30vh;
+    padding: 10px;
+    border: 2px solid red;
+}
+
+form {
+    width: 100%;
+    
+}
+
+input,label
+{
+    font-size: 18px;
+    border-radius:15px;
+    
+}
+h2 
+{
+    text-align:center;
+    font-size:28px;
+}
+
+.btn1
+{
+    font-size: 20px;
+    background-color:yellow;
+    
+}
+
+
